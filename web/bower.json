@@ -1,0 +1,9 @@
+{
+    "name": "rosa-v2-webapp",
+    "version": "1.0.0",
+    "ignore": [],
+    "dependencies": {
+        "osc.js": "2.1.0",
+        "jquery": "2.2.3"
+    }
+}
