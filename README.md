@@ -49,3 +49,6 @@ You can also just open the index.html file in your web browser
 
 When you have the node server and the index.html file loaded, click on the Setup button. You should see the status in RoSa update to say "osc edit: requested settings for setup to send to host" and the web page will be updated with the received message from RoSa.
 
+![RoSa setup](https://raw.githubusercontent.com/leaves-and-petalz/RoSa-v2-browser-interface/master/files/RoSa.png)
+
+![Message response](https://raw.githubusercontent.com/leaves-and-petalz/RoSa-v2-browser-interface/master/files/setup.png)
