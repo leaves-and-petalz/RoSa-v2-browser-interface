@@ -6,7 +6,7 @@ This project aims to implement the complete specification of control options for
 
 Based on the OSC.js project from Colin Clark https://github.com/colinbdclark/osc.js
 
-The web browser app will the node Websocket server server to relay messages to OSC via UDP. 
+The web browser app connects with the nodejs Websocket server to relay messages to OSC via UDP. 
 
 ###Default settings in index.js:
 
