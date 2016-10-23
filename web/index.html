@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>RoSa v2 browser interface</title>
+        <title>RoSa-v2 webapp demo</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" media="all" href="osc-view.css"></link>
         <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -27,12 +27,90 @@
                 });
             };
 
+            var Mode = function () {
+                console.log("Sample")
+
+
+                port.send({
+                    address: "/rse/setup/mode",
+                    args: [1.0000]
+                });
+
+
+                
+            };
+
+
+            var Request = function () {
+                console.log("Request")
+
+                port.send({
+                    address: "/rse/loadzone/request",
+                    args: 0
+                });
+                
+            };
+
+            var Sample = function () {
+                console.log("Sample")
+
+                port.send({
+                    address: "/rse/setup/sample",
+                    args: [0.0078125]
+                });
+                
+            };
+
+            var SetbufferStart = function () {
+                console.log("Setbuffer")
+                port.send({
+                    address: "/rse/playzone/region/start",
+                    args: ["znr",0]
+                });
+
+            };
+
+ 
+             var SetbufferLength = function () {
+                console.log("Setbuffer")
+                port.send({
+                    address: "/rse/playzone/region/len",
+                    args: ["znr",0.1]
+                });
+
+            };
+              
+
+            var Play = function () {
+                console.log("Play")
+                port.send({
+                    address: "/rsp/playzone/nr1",
+                    args: [1,1]
+                });
+            };
+
+
+            var Stop = function () {
+                console.log("Play")
+                port.send({
+                    address: "/rsp/playzone/nr1",
+                    args: [1,0]
+                });
+            };
+
+            var SetupRecord = function () {
+                console.log("SetupRecord")
+                port.send({
+                    address: "/rse/loadzone/request",
+                    args: [1,]
+                });
+            };
 
         </script>
     </head>
 
     <body>
-        <h1>RoSa v2 browser interface</h1>
+        <h1>osc.js Web Socket Demo</h1>
 
         <div id="messageArea">
             <p id="messageLabel">OSC Message:</p>
@@ -40,6 +118,14 @@
         </div>
 
         <button onclick="SetUp()">SetUp</button>
-
+        <button onclick="Mode()">Mode</button>
+        <button onclick="Request()">Request</button>
+        <button onclick="Sample()">Sample</button>
+        <button onclick="SetbufferStart()">SetbufferStart</button>
+        <button onclick="SetbufferLength()">SetbufferLength</button>
+        <button onclick="Play()">Play</button>
+        <button onclick="Stop()">Stop</button>
+        <hr>
+        <button onclick="SetupRecord()">SetupRecord</button>
     </body>
 </html>

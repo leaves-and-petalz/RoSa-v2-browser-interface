@@ -52,3 +52,4 @@ When you have the node server and the index.html file loaded, click on the Setup
 ![RoSa setup](https://raw.githubusercontent.com/leaves-and-petalz/RoSa-v2-browser-interface/master/files/RoSa.png)
 
 ![Message response](https://raw.githubusercontent.com/leaves-and-petalz/RoSa-v2-browser-interface/master/files/setup.png)
+
